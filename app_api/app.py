@@ -1,11 +1,11 @@
 import logging.config
 
 from flask import Flask, Blueprint
-from rest_api_demo import settings
-from rest_api_demo.api.blog.endpoints.posts import ns as blog_posts_namespace
-from rest_api_demo.api.blog.endpoints.categories import ns as blog_categories_namespace
-from rest_api_demo.api.restplus import api
-from rest_api_demo.database import db
+import settings
+from api.blog.endpoints.posts import ns as blog_posts_namespace
+from api.blog.endpoints.categories import ns as blog_categories_namespace
+from api.restplus import api
+from database import db
 
 app = Flask(__name__)
 logging.config.fileConfig('logging.conf')

@@ -1,5 +1,5 @@
-from rest_api_demo.database import db
-from rest_api_demo.database.models import Post, Category
+from app_api.database import db
+from app_api.database.models import Post, Category
 
 
 def create_blog_post(data):

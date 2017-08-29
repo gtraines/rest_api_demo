@@ -2,11 +2,12 @@ import logging
 
 from flask import request
 from flask_restplus import Resource
-from rest_api_demo.api.blog.business import create_blog_post, update_post, delete_post
-from rest_api_demo.api.blog.serializers import blog_post, page_of_blog_posts
-from rest_api_demo.api.blog.parsers import pagination_arguments
-from rest_api_demo.api.restplus import api
-from rest_api_demo.database.models import Post
+
+from app_api.blog import blog_post, page_of_blog_posts
+from app_api.blog import create_blog_post, update_post, delete_post
+from app_api.blog import pagination_arguments
+from app_api.database.models import Post
+from app_api.restplus import api
 
 log = logging.getLogger(__name__)
 
